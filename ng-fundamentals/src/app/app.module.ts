@@ -16,6 +16,7 @@ import { EventRouteActivatorService } from './events/event-details/event-route-a
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './../routes';
 import { Error404Component } from './events/404.component';
+import { EventListResolverService } from './events/shared/event-list.resolver.service';
 
 
 
@@ -35,7 +36,7 @@ import { Error404Component } from './events/404.component';
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [EventService, ToastrService, EventRouteActivatorService],
+  providers: [EventService, ToastrService, EventRouteActivatorService, EventListResolverService],
   bootstrap: [EventsApp]
 })
 export class AppModule { }
